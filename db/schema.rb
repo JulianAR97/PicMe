@@ -22,10 +22,9 @@ ActiveRecord::Schema.define(version: 2021_01_26_225724) do
   end
 
   create_table "photos", force: :cascade do |t|
-    t.text "thumb_url"
-    t.text "small_url"
-    t.text "regular_url"
+    t.text "url"
     t.string "artist"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
