@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_26_223616) do
+ActiveRecord::Schema.define(version: 2021_01_26_225724) do
+
+  create_table "digs", force: :cascade do |t|
+    t.integer "post_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_digs_on_post_id"
+    t.index ["user_id"], name: "index_digs_on_user_id"
+  end
 
   create_table "photos", force: :cascade do |t|
     t.text "thumb_url"
@@ -28,4 +37,6 @@ ActiveRecord::Schema.define(version: 2021_01_26_223616) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "digs", "posts"
+  add_foreign_key "digs", "users"
 end

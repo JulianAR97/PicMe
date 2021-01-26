@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :digs
   resources :users
   resources :photos
   get '/login', to: 'session#new'
