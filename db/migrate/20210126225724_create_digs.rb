@@ -1,7 +1,7 @@
 class CreateDigs < ActiveRecord::Migration[6.1]
   def change
     create_table :digs do |t|
-      t.belongs_to :photo, null: false, foreign_key: true
+      t.belongs_to :pic, null: false, foreign_key: true
       t.belongs_to :user, null: false, foreign_key: true
 
       t.timestamps

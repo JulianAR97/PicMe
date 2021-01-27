@@ -1,4 +1,4 @@
-class Photo < ApplicationRecord
+class Pic < ApplicationRecord
   belongs_to :user
   has_many :digs
 
