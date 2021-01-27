@@ -1,4 +1,4 @@
 class Dig < ApplicationRecord
-  belongs_to :post
+  belongs_to :photo
   belongs_to :user
 end
