@@ -1,5 +1,36 @@
-<% @photos.each do |photo| %>
-  <div class="picture", style="padding:auto;">
-    <%= image_tag photo.url, style: 'height:150px; width:150px;'%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <%= image_tag(@photos.first.url, style:"width:100%")%>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <%= image_tag(@photos.second.url, style:"width:100%")%>     
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <%= image_tag(@photos.last.url, style:"width:100%")%>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <%= image_tag(@photos.first.url, style:"width:100%")%>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <%= image_tag(@photos.second.url, style:"width:100%")%>     
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <%= image_tag(@photos.last.url, style:"width:100%")%>
+      </div>
+    </div>
   </div>
-<% end %>
+</div>
+

@@ -10,7 +10,27 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="background-color:#e8d1d1;">
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color:#b19191;">
+      <%= link_to "PicMe", root_path, class:"navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <%= link_to "Browse", photos_path, class:"nav-link" %>
+            <a>
+          </li>
+          <li class="nav-item">
+            <%= link_to "MyPics", photos_path, class:"nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Random", photos_path, class:"nav-link" %>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
