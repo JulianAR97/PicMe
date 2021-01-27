@@ -37,8 +37,11 @@ end
 
 def create_digs
   Dig.create(photo_id: 1, user_id: 1)
-  Dig.create(photo_id: 1, user_id: 2)
   Dig.create(photo_id: 1, user_id: 3)
+  Dig.create(photo_id: 1, user_id: 4)
+  Dig.create(photo_id: 6, user_id: 5)
+  Dig.create(photo_id: 6, user_id: 3)
+  Dig.create(photo_id: 11, user_id: 4)
 end
 
 create_seeds
